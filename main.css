@@ -1,50 +1,47 @@
-/*  CCS Styling  */
-html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto';
-    font-size: 12px;
-    box-sizing: border-box;
-    overflow: hidden;
+/* SASS */
+html body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  font-size: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .header {
-    background-color: #011827;
-    height: min-content;
-    width: 100vw;
+  background-color: #011827;
+  height: min-content;
+  width: 100vw;
 }
 
 .logoContainer {
-    display: inline-flex;
-    height: min-content;
-    margin: 25px 0px 35px 25px;
+  display: inline-flex;
+  height: min-content;
+  margin: 25px 0px 35px 25px;
 }
 
 img.logo {
-    margin: 0 15px 0 0;
-    object-fit: contain;
+  margin: 0 15px 0 0;
+  object-fit: contain;
 }
 
 .headline {
-    margin: 0;
-    color: white;
-    width: min-content;
-
+  margin: 0;
+  color: white;
+  width: min-content;
 }
 
 @media screen and (max-width: 700px) {
-    .mainMenu {
-        display: none;
-    }
+  .mainMenu {
+    display: none;
+  }
 }
 
 .mainImg {
-    background-image: url('assets/image 2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw;
-    aspect-ratio: 2/1;
-
-
+  background-image: url("assets/image 2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  display: block;
 }

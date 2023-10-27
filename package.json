@@ -4,7 +4,8 @@
   "description": "Website project for \"ESC\" Hacker Escape Rooms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass:watch": "sass --no-source-map --watch src/main.scss main.css",
+    "sass:compile": "sass --no-source-map src/main.scss main.css"
   },
   "author": "",
   "license": "ISC",
