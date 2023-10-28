@@ -1,67 +1,169 @@
 /* SASS */
+* {
+  font-size: inherit;
+}
+
+h1 {
+  all: unset;
+}
+
 html body {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
-  font-size: 12px;
+  font-size: 10px;
   box-sizing: border-box;
 }
+html body a:visited {
+  color: #fff;
+}
 
+/*  Header /start   */
 .header {
   background-color: #011827;
   height: min-content;
   width: 100vw;
 }
-.header .logoContainer {
+
+.logoContainer {
   display: inline-flex;
   height: min-content;
   margin: 25px 0px 35px 25px;
 }
-.header img.logo {
+
+img.logo {
   margin: 0 15px 0 0;
   object-fit: contain;
 }
-.header .headline {
+
+.headline {
   margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: white;
   width: min-content;
 }
-@media screen and (max-width: 700px) {
-  .header .mainMenu {
-    display: none;
+@media screen and (min-width: 700px) {
+  .headline {
+    width: max-content;
+    align-self: flex-end;
+    font-size: 2.5rem;
   }
 }
 
+.mainMenu {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .mainMenu {
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 20px;
+    width: 80vw;
+  }
+  .mainMenu :hover {
+    color: #8ACFE5;
+  }
+}
+.mainMenu a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+@media screen and (min-width: 1000px) {
+  .mainMenu a {
+    font-size: 1.5rem;
+  }
+}
+
+/*  Header /end    */
+/*  Part 2 start, Buttons, Testimonials, Challenge cards  */
 .mainBackgroundImg {
-  background-image: url("assets/image2.png");
+  background-image: url("assets/bgMain.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 270px;
   width: 100vw;
 }
-
-.container1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 700px) {
+  .mainBackgroundImg {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .mainBackgroundImg {
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainBackgroundImg {
+    background-image: url("assets/bgMainWide.png");
+    background-position: top;
+  }
 }
 
 .container2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
 }
 
 .onSiteBtn1 {
   display: block;
   background-color: #8ACFE5;
   border: none;
-  border-radius: 3px;
-  font-size: 1rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
   font-weight: bold;
   width: fit-content;
   height: fit-content;
-  padding: 10px 30px;
-  margin: 15px;
+  padding: 20px 50px;
+  margin: 35px 0 30px;
 }
+
+.onlineChallenges {
+  color: #36769D;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: underline;
+  margin: 0 0 60px;
+}
+
+.testimonials {
+  align-self: flex-end;
+}
+
+.quote1 {
+  display: block;
+  position: relative;
+  width: 95vw;
+}
+.quote1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  scale: 80%;
+}
+.quote1 cite {
+  position: absolute;
+  top: 0;
+  left: 110px;
+  font-size: 1.5rem;
+}
+.quote1 p {
+  position: absolute;
+  top: 105px;
+  left: 110px;
+  font-size: 1rem;
+}
+
+.subheading {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+/*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
