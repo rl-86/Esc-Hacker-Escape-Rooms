@@ -1,25 +1,22 @@
 /* SASS */
 * {
-    font-size: inherit;
-}
-
-h1 {
-    all: unset;
-}
-
-html body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
     font-size: 10px;
     box-sizing: border-box;
+}
+
+html {
+
+
 
     a:visited {
         color: #fff;
     }
 }
 
-/*  Header /start   */
+/*  vvv  Header  vvv  */
 .header {
     background-color: #011827;
     height: min-content;
@@ -38,8 +35,9 @@ img.logo {
 }
 
 .headline {
+    align-self: flex-end;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     font-weight: bold;
     color: white;
     width: min-content;
@@ -47,10 +45,15 @@ img.logo {
     @media screen and (min-width: 700px) {
         width: max-content;
         align-self: flex-end;
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
+    @media screen and (min-width: 1000px) {
+        font-size: 4rem;
+    }
 }
+
+/*  Main menu   */
 
 .mainMenu {
     display: none;
@@ -58,10 +61,8 @@ img.logo {
     @media screen and (min-width: 700px) {
         display: flex;
         color: white;
-        justify-content: space-evenly;
-        align-content: center;
-        padding: 20px;
-        width: 80vw;
+        justify-content: center;
+
 
         :hover {
             color: #8ACFE5;
@@ -69,17 +70,23 @@ img.logo {
     }
 
     a {
-        font-size: 1.2rem;
+        display: flex;
+        font-size: 1.8rem;
         font-weight: bold;
         text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        width: 15vw;
+        height: 50px;
 
         @media screen and (min-width: 1000px) {
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
     }
 }
 
-/*  Header /end    */
+/*  ^^^  Header  ^^^  */
 
 /*  Part 2 start, Buttons, Testimonials, Challenge cards  */
 
@@ -89,7 +96,6 @@ img.logo {
     background-repeat: no-repeat;
     background-position: center;
     height: 270px;
-    width: 100vw;
 
     @media screen and (min-width: 700px) {
         height: 350px;
@@ -105,7 +111,7 @@ img.logo {
     }
 }
 
-.container2 {
+.buttonContainer_1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,7 +123,7 @@ img.logo {
     background-color: #8ACFE5;
     border: none;
     border-radius: 4px;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     font-weight: bold;
     width: fit-content;
     height: fit-content;
@@ -128,45 +134,113 @@ img.logo {
 .onlineChallenges {
     color: #36769D;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.6rem;
     text-decoration: underline;
     margin: 0 0 60px;
 }
 
+/*  vvv  Testimonials  vvv  */
+
 .testimonials {
-    align-self: flex-end;
+    display: flex;
 }
 
 .quote1 {
-    display: block;
-    position: relative;
-    width: 95vw;
+    display: flex;
 
     img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        scale: 80%;
+        margin: 0 20px;
+        width: 75px;
+        height: 75px;
     }
 
     cite {
-        position: absolute;
-        top: 0;
-        left: 110px;
-        font-size: 1.5rem;
+        font-size: 2.4rem;
     }
 
     p {
-        position: absolute;
-        top: 105px;
-        left: 110px;
-        font-size: 1rem;
+        font-size: 1.8rem;
+        margin: 10px 0;
     }
 }
 
+/*  ^^^  Testimonials  ^^^  */
+
+.popularChallenges {
+    margin: 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .subheading {
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: normal;
+    margin: 40px 0;
+}
+
+.roomTile {
+
+    margin: 30px 0;
+    width: 363px;
+    height: 446px;
+    background-image: url("assets/image 3.png");
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.buttonContainer_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
+
+.card {
+    width: 363px;
+    height: 446px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+        width: 100%;
+        max-height: 100px;
+        /* Anpassa höjden efter behov */
+    }
+
+    h2 {
+        margin-top: 10px;
+    }
+
+    .stars {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+}
