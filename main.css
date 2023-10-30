@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* SASS */
 * {
   margin: 0;
@@ -8,6 +7,9 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
 html a:visited {
   color: #fff;
 }
@@ -21,17 +23,17 @@ html a:visited {
 
 .logoContainer {
   display: inline-flex;
-  height: min-content;
+  align-items: center;
   margin: 25px 0px 35px 25px;
 }
 
 img.logo {
   margin: 0 15px 0 0;
-  object-fit: contain;
+  width: 128px;
+  height: 82px;
 }
 
 .headline {
-  align-self: flex-end;
   margin: 0;
   font-size: 2.4rem;
   font-weight: bold;
@@ -60,6 +62,7 @@ img.logo {
     display: flex;
     color: white;
     justify-content: center;
+    width: 100dvw;
   }
   .mainMenu :hover {
     color: #8ACFE5;
@@ -85,26 +88,26 @@ img.logo {
 /*  ^^^  Header  ^^^  */
 /*  Part 2 start, Buttons, Testimonials, Challenge cards  */
 .mainBackgroundImg {
-  background-image: url("assets/bgMain.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 270px;
+  width: 100vw;
+  height: auto;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .mainBackgroundImg {
-    height: 350px;
+    display: none;
   }
 }
-@media screen and (min-width: 1000px) {
-  .mainBackgroundImg {
-    height: 450px;
-  }
+
+.wideBackgroundImg {
+  display: none;
 }
-@media screen and (min-width: 1200px) {
-  .mainBackgroundImg {
+@media screen and (min-width: 800px) {
+  .wideBackgroundImg {
+    display: block;
     background-image: url("assets/bgMainWide.png");
-    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    aspect-ratio: 16/6;
   }
 }
 
@@ -145,7 +148,7 @@ img.logo {
   display: flex;
 }
 .quote1 img {
-  margin: 0 20px;
+  margin: 0 0px;
   width: 75px;
   height: 75px;
 }
@@ -154,7 +157,7 @@ img.logo {
 }
 .quote1 p {
   font-size: 1.8rem;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 /*  ^^^  Testimonials  ^^^  */
@@ -189,23 +192,25 @@ img.logo {
 }
 
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   width: 363px;
   height: 446px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
-.card img {
-  width: 100%;
-  max-height: 100px;
-  /* Anpassa höjden efter behov */
+.card .tileImg {
+  padding: 0;
 }
-.card h2 {
-  margin-top: 10px;
+.card h3 {
+  margin-top: 5px;
+  font-size: 2.8rem;
 }
 .card .stars {
   display: flex;
@@ -216,7 +221,7 @@ img.logo {
   height: 20px;
   margin-right: 5px;
 }
-.card p {
+.card span {
   margin: 5px 0;
 }
 .card button {

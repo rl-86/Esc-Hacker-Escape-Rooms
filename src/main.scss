@@ -8,8 +8,7 @@
 }
 
 html {
-
-
+    overflow-x: hidden;
 
     a:visited {
         color: #fff;
@@ -25,17 +24,17 @@ html {
 
 .logoContainer {
     display: inline-flex;
-    height: min-content;
+    align-items: center;
     margin: 25px 0px 35px 25px;
 }
 
 img.logo {
     margin: 0 15px 0 0;
-    object-fit: contain;
+    width: 128px;
+    height: 82px;
 }
 
 .headline {
-    align-self: flex-end;
     margin: 0;
     font-size: 2.4rem;
     font-weight: bold;
@@ -62,6 +61,7 @@ img.logo {
         display: flex;
         color: white;
         justify-content: center;
+        width: 100dvw;
 
 
         :hover {
@@ -91,23 +91,26 @@ img.logo {
 /*  Part 2 start, Buttons, Testimonials, Challenge cards  */
 
 .mainBackgroundImg {
-    background-image: url('assets/bgMain.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 270px;
+    width: 100vw;
+    height: auto;
 
-    @media screen and (min-width: 700px) {
-        height: 350px;
+    @media screen and (min-width: 800px) {
+        display: none;
+
+
     }
+}
 
-    @media screen and (min-width: 1000px) {
-        height: 450px;
-    }
+.wideBackgroundImg {
+    display: none;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 800px) {
+        display: block;
         background-image: url('assets/bgMainWide.png');
-        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        aspect-ratio: 16/6;
     }
 }
 
@@ -149,7 +152,7 @@ img.logo {
     display: flex;
 
     img {
-        margin: 0 20px;
+        margin: 0 0px;
         width: 75px;
         height: 75px;
     }
@@ -160,7 +163,7 @@ img.logo {
 
     p {
         font-size: 1.8rem;
-        margin: 10px 0;
+        margin: 8px 0;
     }
 }
 
@@ -200,24 +203,28 @@ img.logo {
 
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
 
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
 .card {
     width: 363px;
     height: 446px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 
-    img {
-        width: 100%;
-        max-height: 100px;
-        /* Anpassa höjden efter behov */
+
+    .tileImg {
+        padding: 0;
     }
 
-    h2 {
-        margin-top: 10px;
+    h3 {
+        margin-top: 5px;
+        font-size: 2.8rem;
+
     }
 
     .stars {
@@ -231,7 +238,8 @@ img.logo {
         }
     }
 
-    p {
+
+    span {
         margin: 5px 0;
     }
 
