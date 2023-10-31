@@ -7,9 +7,6 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-}
 html a:visited {
   color: #fff;
 }
@@ -20,15 +17,14 @@ h2 {
 }
 
 h3 {
-  font-size: 2.8;
+  font-size: 2.8rem;
   font-weight: normal;
 }
 
 /*  vvv  Header  vvv  */
 .header {
   background-color: #011827;
-  height: min-content;
-  width: 100vw;
+  height: fit-content;
 }
 
 .logoContainer {
@@ -72,7 +68,7 @@ img.logo {
     display: flex;
     color: white;
     justify-content: center;
-    width: 100dvw;
+    width: 100%;
   }
   .mainMenu :hover {
     color: #8ACFE5;
@@ -98,7 +94,7 @@ img.logo {
 /*  ^^^  Header  ^^^  */
 /*  Part 2 start, Buttons, Testimonials, Challenge cards  */
 .mainBackgroundImg {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 @media screen and (min-width: 800px) {
@@ -253,11 +249,12 @@ img.logo {
   align-items: center;
   margin-top: 30px;
   background-color: #011827;
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 .ourStory p {
   margin: 80px 0 0;
+  padding: 10px;
   font-size: 2.8rem;
   color: #fff;
   text-align: center;
@@ -274,5 +271,61 @@ img.logo {
   margin: 35px 0 70px;
 }
 
+.bookOn-site_allChallenges_container {
+  display: block;
+}
+@media screen and (min-width: 800px) {
+  .bookOn-site_allChallenges_container {
+    display: flex;
+  }
+}
+.bookOn-site_allChallenges_container img {
+  width: 100%;
+  height: auto;
+}
+.bookOn-site_allChallenges_container h2 {
+  margin: 25px;
+}
+.bookOn-site_allChallenges_container p {
+  margin: 25px;
+}
+.bookOn-site_allChallenges_container button {
+  color: #8ACFE5;
+  background-color: rgba(138, 206, 229, 0);
+  border: 2px solid #8ACFE5;
+  border-radius: 4px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  width: 308px;
+  height: 66px;
+  margin: 35px 0 70px;
+}
+
 /*  Part4 /end  Our Story / Booking / Play online     */
 /*      Footer      */
+.footerContaier {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #011827;
+  color: #fff;
+  height: 566px;
+  padding: 45px 22px;
+  margin: 0;
+  width: 100%;
+}
+.footerContaier h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.footerContaier p {
+  font-size: 1.8rem;
+}
+.footerContaier li {
+  font-size: 1.8rem;
+  list-style: none;
+}
+.footerContaier .listSpace {
+  height: 15px;
+}
