@@ -14,6 +14,16 @@ html a:visited {
   color: #fff;
 }
 
+h2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2.8;
+  font-weight: normal;
+}
+
 /*  vvv  Header  vvv  */
 .header {
   background-color: #011827;
@@ -192,6 +202,7 @@ img.logo {
 }
 
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
+/*  Part3 /start  Scrolling tiles   */
 .cards {
   display: flex;
   justify-content: center;
@@ -233,16 +244,35 @@ img.logo {
   align-self: flex-end;
 }
 
+/*  Part3 /end  Scrolling tiles   */
+/*  Part4 /start  Our Story / Booking / Play online     */
 .ourStory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
   background-color: #011827;
   width: 100vw;
   height: auto;
 }
 .ourStory p {
-  display: inline-block;
-  margin: 80px 0;
+  margin: 80px 0 0;
   font-size: 2.8rem;
   color: #fff;
   text-align: center;
 }
+.ourStory .storyButton {
+  color: #8ACFE5;
+  background-color: rgba(138, 206, 229, 0);
+  border: 2px solid #8ACFE5;
+  border-radius: 4px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  width: 308px;
+  height: 66px;
+  margin: 35px 0 70px;
+}
+
+/*  Part4 /end  Our Story / Booking / Play online     */
+/*      Footer      */
