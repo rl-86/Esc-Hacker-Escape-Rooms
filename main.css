@@ -16,6 +16,19 @@ html li {
 html a:visited {
   color: #fff;
 }
+html ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html ::-webkit-scrollbar-track {
+  background-color: #e3e3e3;
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #011827;
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background-color: #205c82;
+}
 
 h2 {
   font-size: 3.2rem;
@@ -118,7 +131,7 @@ img.logo {
     background-image: url("img/bgMainWide.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     aspect-ratio: 16/6;
   }
 }
@@ -127,11 +140,11 @@ img.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
 }
 
 .onSiteBtn1 {
   background-color: #8ACFE5;
+  color: #011827;
   border: none;
   border-radius: 4px;
   font-size: 2.4rem;
@@ -140,6 +153,12 @@ img.logo {
   height: fit-content;
   padding: 20px 50px;
   margin: 35px 0 30px;
+}
+.onSiteBtn1:hover {
+  background-color: #7dc5dd;
+}
+.onSiteBtn1:active {
+  box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, 0.1882352941);
 }
 
 .onlineChallenges {
@@ -150,6 +169,9 @@ img.logo {
   font-size: 1.6rem;
   text-decoration: underline;
   margin: 0 0 60px;
+}
+.onlineChallenges:hover {
+  color: #205c82;
 }
 
 /*  vvv  Testimonials  vvv  */
@@ -185,8 +207,13 @@ img.logo {
   margin: 40px 20px 20px;
 }
 
-.challengeTiles_sideScroll {
-  background-color: #fff;
+.challengeCards_sideScroll {
+  display: flex;
+  justify-content: center;
+  width: 1300px;
+  height: fit-content;
+  gap: 40px;
+  background-color: #bababa;
 }
 
 .roomCard {
@@ -196,7 +223,7 @@ img.logo {
   width: 363px;
   height: 446px;
   border-radius: 9px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.604);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
   background-color: rgba(54, 118, 157, 0);
 }
 .roomCard .roomCardImg {
@@ -232,7 +259,7 @@ img.logo {
   background-image: url("img/no_star_red.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 .roomCard span {
   font-size: 1.4rem;
@@ -253,6 +280,12 @@ img.logo {
   margin: 5px 20px 10px 21px;
   align-self: flex-end;
 }
+.roomCard .roomCardButton:hover {
+  background-color: #d00e00;
+}
+.roomCard .roomCardButton:active {
+  box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, 0.2862745098);
+}
 
 .buttonContainer_2 {
   display: flex;
@@ -261,53 +294,18 @@ img.logo {
   align-content: center;
   /*  See .buttonContainer_1 to edit buttons  */
 }
+.buttonContainer_2 .onSiteBtn1 {
+  border: 1px solid black;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+.buttonContainer_2 .onSiteBtn1:hover {
+  background-color: #7dc5dd;
+}
+.buttonContainer_2 .onSiteBtn1:active {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6), inset 0 0 3px 3px rgba(0, 0, 0, 0.1882352941);
+}
 
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
-/*  !!!! OLD !!! Scrolling tiles   */
-.cards {
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  width: 363px;
-  height: 446px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-}
-.card .tileImg {
-  padding: 0;
-  border-radius: 10px 10px 0 0;
-  width: 100%;
-}
-.card h3 {
-  margin-top: 5px;
-  font-size: 2.8rem;
-}
-.card .stars {
-  display: flex;
-  align-items: center;
-}
-.card .stars img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-.card span {
-  margin: 5px 0;
-}
-.card button {
-  background-color: #E3170A;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-  align-self: flex-end;
-}
-
-/*  !!!! OLD !!! Scrolling tiles   */
 /*  Part4 /start  Our Story / Booking / Play online     */
 .ourStory {
   display: flex;
@@ -409,3 +407,60 @@ img.logo {
 .footerContaier .listSpace {
   height: 15px;
 }
+
+/*      Footer End     */
+/*  !!!! OLD !!! Scrolling tiles   */
+/*
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 363px;
+    height: 446px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+
+    .tileImg {
+        padding: 0;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+
+    h3 {
+        margin-top: 5px;
+        font-size: 2.8rem;
+
+    }
+
+    .stars {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    }
+
+
+    span {
+        margin: 5px 0;
+    }
+
+    button {
+        background-color: #E3170A;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+}
+*/
+/*  !!!! OLD !!! Scrolling tiles   */

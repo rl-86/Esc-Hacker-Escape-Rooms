@@ -19,6 +19,23 @@ html {
     a:visited {
         color: #fff;
     }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+
+        &-track {
+            background-color: #e3e3e3;
+        }
+
+        &-thumb {
+            background-color: #011827;
+
+            &:hover {
+                background-color: #205c82;
+            }
+        }
+    }
 }
 
 h2 {
@@ -125,7 +142,7 @@ img.logo {
         background-image: url('img/bgMainWide.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100vw;
+        width: 100%;
         aspect-ratio: 16/6;
     }
 }
@@ -134,11 +151,11 @@ img.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
 }
 
 .onSiteBtn1 {
     background-color: #8ACFE5;
+    color: #011827;
     border: none;
     border-radius: 4px;
     font-size: 2.4rem;
@@ -147,6 +164,14 @@ img.logo {
     height: fit-content;
     padding: 20px 50px;
     margin: 35px 0 30px;
+
+    &:hover {
+        background-color: #7dc5dd;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 3px 3px #00000030;
+    }
 }
 
 .onlineChallenges {
@@ -157,6 +182,10 @@ img.logo {
     font-size: 1.6rem;
     text-decoration: underline;
     margin: 0 0 60px;
+
+    &:hover {
+        color: #205c82;
+    }
 }
 
 /*  vvv  Testimonials  vvv  */
@@ -198,20 +227,23 @@ img.logo {
     }
 }
 
-.challengeTiles_sideScroll {
-
-    background-color: #fff;
+.challengeCards_sideScroll {
+    display: flex;
+    justify-content: center;
+    width: 1300px;
+    height: fit-content;
+    gap: 40px;
+    background-color: #bababa;
 }
 
 .roomCard {
     display: flex;
     flex-direction: column;
     margin: 30px 0;
-
     width: 363px;
     height: 446px;
     border-radius: 9px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.604);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
     background-color: #36769d00;
 
     .roomCardImg {
@@ -251,7 +283,7 @@ img.logo {
         background-image: url('img/no_star_red.png');
         background-repeat: no-repeat;
         background-size: cover;
-        margin-right: 5px;
+        margin-right: 7px;
     }
 
     span {
@@ -274,6 +306,15 @@ img.logo {
         height: 44px;
         margin: 5px 20px 10px 21px;
         align-self: flex-end;
+
+        &:hover {
+            background-color: #d00e00;
+        }
+
+        &:active {
+            box-shadow:
+                inset 0 0 3px 3px #00000049;
+        }
     }
 
 }
@@ -284,66 +325,27 @@ img.logo {
     align-items: center;
     align-content: center;
 
+    .onSiteBtn1 {
+        border: 1px solid black;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+
+        &:hover {
+            background-color: #7dc5dd;
+        }
+
+        &:active {
+            box-shadow:
+                0 3px 8px rgba(0, 0, 0, 0.6),
+                inset 0 0 3px 3px #00000030;
+        }
+    }
+
     /*  See .buttonContainer_1 to edit buttons  */
 
 }
 
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
 
-/*  !!!! OLD !!! Scrolling tiles   */
-.cards {
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    width: 363px;
-    height: 446px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-
-
-    .tileImg {
-        padding: 0;
-        border-radius: 10px 10px 0 0;
-        width: 100%;
-    }
-
-    h3 {
-        margin-top: 5px;
-        font-size: 2.8rem;
-
-    }
-
-    .stars {
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
-    }
-
-
-    span {
-        margin: 5px 0;
-    }
-
-    button {
-        background-color: #E3170A;
-        color: #fff;
-        padding: 5px 10px;
-        border: none;
-        cursor: pointer;
-        align-self: flex-end;
-    }
-}
-
-/*  !!!! OLD !!! Scrolling tiles   */
 
 /*  Part4 /start  Our Story / Booking / Play online     */
 
@@ -462,3 +464,61 @@ img.logo {
         height: 15px;
     }
 }
+
+/*      Footer End     */
+
+/*  !!!! OLD !!! Scrolling tiles   */
+/*
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 363px;
+    height: 446px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+
+    .tileImg {
+        padding: 0;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+
+    h3 {
+        margin-top: 5px;
+        font-size: 2.8rem;
+
+    }
+
+    .stars {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    }
+
+
+    span {
+        margin: 5px 0;
+    }
+
+    button {
+        background-color: #E3170A;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+}
+*/
+/*  !!!! OLD !!! Scrolling tiles   */
