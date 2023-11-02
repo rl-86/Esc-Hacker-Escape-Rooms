@@ -8,7 +8,13 @@
 }
 
 html {
+    button {
+        cursor: pointer;
+    }
 
+    li {
+        list-style: none;
+    }
 
     a:visited {
         color: #fff;
@@ -132,7 +138,6 @@ img.logo {
 }
 
 .onSiteBtn1 {
-    display: block;
     background-color: #8ACFE5;
     border: none;
     border-radius: 4px;
@@ -145,7 +150,9 @@ img.logo {
 }
 
 .onlineChallenges {
+    background: none;
     color: #36769D;
+    border: none;
     font-weight: bold;
     font-size: 1.6rem;
     text-decoration: underline;
@@ -184,36 +191,106 @@ img.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    h2 {
+        font-weight: normal;
+        margin: 40px 20px 20px;
+    }
 }
 
-.subheading {
-    font-size: 3.2rem;
-    font-weight: normal;
-    margin: 40px 0;
+.challengeTiles_sideScroll {
+
+    background-color: #fff;
 }
 
-.roomTile {
-
+.roomCard {
+    display: flex;
+    flex-direction: column;
     margin: 30px 0;
+
     width: 363px;
     height: 446px;
-    background-image: url("img/tile1.jpg");
-    background-repeat: no-repeat;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-}
+    border-radius: 9px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.604);
+    background-color: #36769d00;
 
+    .roomCardImg {
+        display: block;
+        width: 363px;
+        min-height: 219px;
+        background-image: url("img/roomCard.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #36769D;
+        border-radius: 9px 9px 0 0;
+    }
+
+    h3 {
+        margin: 12px 0 0 17px;
+    }
+
+    .rating {
+        display: flex;
+        width: 250px;
+        height: fit-content;
+        margin: 3px 0 0 20px;
+    }
+
+    .star {
+        width: 15px;
+        height: 15px;
+        background-image: url('img/star_red.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 7px;
+    }
+
+    .no_star {
+        width: 15px;
+        height: 15px;
+        background-image: url('img/no_star_red.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 5px;
+    }
+
+    span {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        margin: 15px;
+    }
+
+    .roomCardButton {
+        color: #fff;
+        background-color: #E3170A;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        width: 179px;
+        height: 44px;
+        margin: 5px 20px 10px 21px;
+        align-self: flex-end;
+    }
+
+}
 
 .buttonContainer_2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
+
+    /*  See .buttonContainer_1 to edit buttons  */
+
 }
 
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
 
-/*  Part3 /start  Scrolling tiles   */
+/*  !!!! OLD !!! Scrolling tiles   */
 .cards {
     display: flex;
     justify-content: center;
@@ -224,12 +301,14 @@ img.logo {
     height: 446px;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 
 
     .tileImg {
         padding: 0;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
     }
 
     h3 {
@@ -264,7 +343,7 @@ img.logo {
     }
 }
 
-/*  Part3 /end  Scrolling tiles   */
+/*  !!!! OLD !!! Scrolling tiles   */
 
 /*  Part4 /start  Our Story / Booking / Play online     */
 
@@ -335,7 +414,7 @@ img.logo {
     button {
         color: #fff;
         background-color: #E3170A;
-        border: 2px solid #8ACFE5;
+        border: none;
         border-radius: 4px;
         font-size: 2.4rem;
         font-weight: bold;
@@ -348,19 +427,6 @@ img.logo {
         height: 0;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*  Part4 /end  Our Story / Booking / Play online     */
 
