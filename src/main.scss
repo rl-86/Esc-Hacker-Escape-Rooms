@@ -104,10 +104,7 @@ img.logo {
         color: white;
         justify-content: space-evenly;
         width: 80vw;
-
         margin: 0 auto;
-
-
 
         :hover {
             color: #8ACFE5;
@@ -140,6 +137,7 @@ img.logo {
 .mainBackgroundImg {
     width: 100%;
     height: auto;
+    background-color: #011827;
 
     @media screen and (min-width: 800px) {
         display: none;
@@ -151,6 +149,7 @@ img.logo {
 
     @media screen and (min-width: 800px) {
         display: block;
+        background-color: #011827;
         background-image: url('img/bgMainWide.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -549,7 +548,7 @@ img.logo {
     color: #fff;
     height: 566px;
     padding: 45px 22px;
-    margin: 35px 0;
+    margin-top: 35px;
     width: 100%;
 
     h4 {
@@ -573,59 +572,3 @@ img.logo {
 }
 
 /*      Footer End     */
-
-/*  !!!! OLD !!! Scrolling tiles   */
-/*
-.cards {
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    width: 363px;
-    height: 446px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-
-
-    .tileImg {
-        padding: 0;
-        border-radius: 10px 10px 0 0;
-        width: 100%;
-    }
-
-    h3 {
-        margin-top: 5px;
-        font-size: 2.8rem;
-
-    }
-
-    .stars {
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
-    }
-
-
-    span {
-        margin: 5px 0;
-    }
-
-    button {
-        background-color: #E3170A;
-        color: #fff;
-        padding: 5px 10px;
-        border: none;
-        cursor: pointer;
-        align-self: flex-end;
-    }
-}
-*/
-/*  !!!! OLD !!! Scrolling tiles   */
