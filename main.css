@@ -24,7 +24,8 @@ html ::-webkit-scrollbar-track {
   background-color: #e3e3e3;
 }
 html ::-webkit-scrollbar-thumb {
-  background-color: #011827;
+  background-color: rgba(1, 24, 39, 0.4705882353);
+  border-radius: 50px;
 }
 html ::-webkit-scrollbar-thumb:hover {
   background-color: #205c82;
@@ -65,11 +66,11 @@ img.logo {
   color: white;
   width: min-content;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .headline {
     width: max-content;
     align-self: flex-end;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -82,12 +83,13 @@ img.logo {
 .mainMenu {
   display: none;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .mainMenu {
     display: flex;
     color: white;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: 0 auto;
   }
   .mainMenu :hover {
     color: #8ACFE5;
@@ -95,18 +97,19 @@ img.logo {
 }
 .mainMenu a {
   display: flex;
-  font-size: 1.8rem;
+  background-color: none;
+  font-size: 2.4rem;
   font-weight: bold;
   text-decoration: none;
-  justify-content: center;
   align-items: center;
-  margin: 0 20px;
-  width: 15vw;
+  width: fit-content;
+  height: min-content;
+  margin: 12px 0;
   height: 50px;
 }
 @media screen and (min-width: 1000px) {
   .mainMenu a {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -141,6 +144,14 @@ img.logo {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 800px) {
+  .buttonContainer_1 {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 20px;
+    margin: -7em 0 4em;
+  }
+}
 
 .onSiteBtn1 {
   background-color: #8ACFE5;
@@ -168,24 +179,55 @@ img.logo {
   font-weight: bold;
   font-size: 1.6rem;
   text-decoration: underline;
-  margin: 0 0 60px;
+  margin: 0 10px 60px;
 }
 .onlineChallenges:hover {
   color: #205c82;
+}
+@media screen and (min-width: 800px) {
+  .onlineChallenges {
+    color: #fff;
+    background-color: #E3170A;
+    border: none;
+    border-radius: 4px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 50px;
+    margin: 35px 0px 30px;
+  }
+  .onlineChallenges:hover {
+    color: #fff;
+    background-color: #d00e00;
+  }
+  .onlineChallenges:active {
+    box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, 0.2196078431);
+  }
 }
 
 /*  vvv  Testimonials  vvv  */
 .testimonials {
   display: flex;
+  justify-content: center;
 }
 
 .quote1 {
   display: flex;
+  max-width: 520px;
+  margin-right: 30px;
 }
 .quote1 img {
   margin: 0 25px;
-  width: 75px;
-  height: 75px;
+  width: 73px;
+  height: 72px;
+}
+@media screen and (min-width: 800px) {
+  .quote1 img {
+    width: 96px;
+    height: 96px;
+  }
 }
 .quote1 cite {
   font-size: 2.4rem;
@@ -193,6 +235,33 @@ img.logo {
 .quote1 p {
   font-size: 1.8rem;
   margin: 8px 0;
+}
+
+.quote2 {
+  display: none;
+  max-width: 520px;
+  margin-right: 30px;
+}
+.quote2 img {
+  margin: 0 25px;
+  width: 73px;
+  height: 72px;
+}
+.quote2 cite {
+  font-size: 2.4rem;
+}
+.quote2 p {
+  font-size: 1.8rem;
+  margin: 8px 0;
+}
+@media screen and (min-width: 800px) {
+  .quote2 {
+    display: flex;
+  }
+  .quote2 img {
+    width: 96px;
+    height: 96px;
+  }
 }
 
 /*  ^^^  Testimonials  ^^^  */
@@ -203,17 +272,28 @@ img.logo {
   align-items: center;
 }
 .popularChallenges h2 {
+  font-size: 3.2rem;
   font-weight: normal;
-  margin: 40px 20px 20px;
+  margin: 40px 20px 50px;
 }
 
 .challengeCards_sideScroll {
   display: flex;
+  overflow-x: hidden;
+  align-items: center;
   justify-content: center;
-  width: 1300px;
-  height: fit-content;
+  width: 100%;
+  height: 520px;
   gap: 40px;
-  background-color: #bababa;
+  background-color: rgba(186, 186, 186, 0);
+}
+@media screen and (max-width: 1235px) {
+  .challengeCards_sideScroll {
+    overflow-x: scroll;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding: 0 50px;
+  }
 }
 
 .roomCard {
@@ -241,7 +321,8 @@ img.logo {
 }
 .roomCard .rating {
   display: flex;
-  width: 250px;
+  position: relative;
+  width: 340px;
   height: fit-content;
   margin: 3px 0 0 20px;
 }
@@ -251,7 +332,7 @@ img.logo {
   background-image: url("img/star_red.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 7px;
+  margin-right: 8px;
 }
 .roomCard .no_star {
   width: 15px;
@@ -259,10 +340,18 @@ img.logo {
   background-image: url("img/no_star_red.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 7px;
+  margin-right: 8px;
 }
 .roomCard span {
+  display: inline-block;
   font-size: 1.4rem;
+  margin-left: 12px;
+}
+@media screen and (min-width: 800px) {
+  .roomCard span {
+    width: 60%;
+    text-align: right;
+  }
 }
 .roomCard p {
   font-size: 1.8rem;
@@ -292,19 +381,9 @@ img.logo {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  /*  See .buttonContainer_1 to edit buttons  */
-}
-.buttonContainer_2 .onSiteBtn1 {
-  border: 1px solid black;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
-}
-.buttonContainer_2 .onSiteBtn1:hover {
-  background-color: #7dc5dd;
-}
-.buttonContainer_2 .onSiteBtn1:active {
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6), inset 0 0 3px 3px rgba(0, 0, 0, 0.1882352941);
 }
 
+/*  See .buttonContainer_1 to edit buttons  */
 /*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
 /*  Part4 /start  Our Story / Booking / Play online     */
 .ourStory {
@@ -315,10 +394,10 @@ img.logo {
   margin-top: 30px;
   background-color: #011827;
   width: 100%;
-  height: auto;
+  height: 500px;
 }
 .ourStory p {
-  margin: 80px 0 0;
+  margin: 70px 0 0;
   padding: 10px;
   font-size: 2.8rem;
   color: #fff;
@@ -333,7 +412,13 @@ img.logo {
   font-weight: bold;
   width: 308px;
   height: 66px;
-  margin: 35px 0 70px;
+  margin: 30px 0 70px;
+}
+.ourStory .storyButton:hover {
+  color: #bfefff;
+}
+.ourStory .storyButton:active {
+  border-color: #bfefff;
 }
 
 .bookOn-site_AllChallenges_Container {
@@ -355,14 +440,14 @@ img.logo {
   height: auto;
   position: relative;
   top: -10px;
-  margin-bottom: -35px;
+  margin-bottom: -40px;
 }
 .bookOn-site_AllChallenges_Container h2 {
-  margin: 25px;
+  margin: 20px;
 }
 .bookOn-site_AllChallenges_Container p {
   font-size: 2.4rem;
-  margin: 25px;
+  margin: 20px;
 }
 .bookOn-site_AllChallenges_Container button {
   color: #fff;
@@ -373,10 +458,13 @@ img.logo {
   font-weight: bold;
   width: 308px;
   height: 66px;
-  margin: 35px 0 70px 21px;
+  margin: 50px 0 65px 21px;
 }
-.bookOn-site_AllChallenges_Container .paddingSpace {
-  height: 0;
+.bookOn-site_AllChallenges_Container button:hover {
+  background-color: #d00e00;
+}
+.bookOn-site_AllChallenges_Container button:active {
+  box-shadow: inset 0 0 3px 4px rgba(0, 0, 0, 0.2862745098);
 }
 
 /*  Part4 /end  Our Story / Booking / Play online     */
@@ -389,7 +477,7 @@ img.logo {
   color: #fff;
   height: 566px;
   padding: 45px 22px;
-  margin: 0;
+  margin: 35px 0;
   width: 100%;
 }
 .footerContaier h4 {
