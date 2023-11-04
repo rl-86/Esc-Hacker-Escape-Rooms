@@ -230,7 +230,7 @@ img.logo {
 
         &:active {
             box-shadow:
-                inset 0 0 4px 4px #00000038;
+                inset 0 0 5px 3px #00000050;
         }
     }
 }
@@ -517,7 +517,7 @@ img.logo {
 
         &:active {
             box-shadow:
-                inset 0 0 3px 4px #00000049;
+                inset 0 0 5px 3px #00000050;
         }
     }
 
@@ -635,6 +635,11 @@ img.logo {
     li {
         font-size: 1.8rem;
         list-style: none;
+
+        &:hover {
+            color: #8ACFE5;
+            cursor: pointer;
+        }
     }
 
     .listSpace {
@@ -644,12 +649,12 @@ img.logo {
     @media screen and (min-width:840px) {
         display: flex;
         flex-direction: row;
-        padding: 0;
-        height: 467px;
         align-content: center;
         justify-content: space-around;
         align-items: flex-start;
         flex-wrap: wrap;
+        padding: 0;
+        height: 467px;
 
         /*.footerSiteMap {
             margin-right: -110px;

@@ -212,7 +212,7 @@ img.logo {
     background-color: #d00e00;
   }
   .onlineChallenges:active {
-    box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, 0.2196078431);
+    box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.3137254902);
   }
 }
 
@@ -463,7 +463,7 @@ img.logo {
   background-color: #d00e00;
 }
 .bookOn-site_AllChallenges_Container button:active {
-  box-shadow: inset 0 0 3px 4px rgba(0, 0, 0, 0.2862745098);
+  box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.3137254902);
 }
 .bookOn-site_AllChallenges_Container img {
   width: 100%;
@@ -558,6 +558,10 @@ img.logo {
   font-size: 1.8rem;
   list-style: none;
 }
+.footerContaier li:hover {
+  color: #8ACFE5;
+  cursor: pointer;
+}
 .footerContaier .listSpace {
   height: 15px;
 }
@@ -565,12 +569,12 @@ img.logo {
   .footerContaier {
     display: flex;
     flex-direction: row;
-    padding: 0;
-    height: 467px;
     align-content: center;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding: 0;
+    height: 467px;
     /*.footerSiteMap {
         margin-right: -110px;
     }
