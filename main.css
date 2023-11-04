@@ -437,16 +437,14 @@ img.logo {
   border-color: #bfefff;
 }
 
-.bookOn-site_AllChallenges_Container {
-  display: block;
-}
 @media screen and (min-width: 840px) {
   .bookOn-site_AllChallenges_Container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 35.7vw 35.7vw;
     justify-items: center;
-    align-items: start;
+    align-items: center;
+    overflow: hidden;
   }
 }
 .bookOn-site_AllChallenges_Container button {
@@ -469,7 +467,6 @@ img.logo {
 .bookOn-site_AllChallenges_Container img {
   width: 100%;
   height: auto;
-  position: relative;
 }
 @media screen and (min-width: 840px) {
   .bookOn-site_AllChallenges_Container img {
@@ -480,44 +477,61 @@ img.logo {
 .bookOn-site_AllChallenges_Container h2 {
   margin: 20px;
 }
+@media screen and (min-width: 840px) {
+  .bookOn-site_AllChallenges_Container h2 {
+    font-size: min(3vw, 3.2rem);
+  }
+}
 .bookOn-site_AllChallenges_Container p {
   font-size: 2.4rem;
   margin: 20px;
 }
 @media screen and (min-width: 840px) {
-  .bookOn-site_AllChallenges_Container .bookOn-site_img {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: 2;
-    grid-column-end: 2;
+  .bookOn-site_AllChallenges_Container p {
+    font-size: min(2.2vw, 2.4rem);
   }
 }
-@media screen and (min-width: 840px) {
-  .bookOn-site_AllChallenges_Container .bookOn-site_Container {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    grid-row-end: 2;
-    grid-column-end: 3;
-    width: 416px;
-  }
-}
-@media screen and (min-width: 840px) {
-  .bookOn-site_AllChallenges_Container .allChallenges_img {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    grid-row-end: 3;
-    grid-column-end: 3;
-  }
-}
-@media screen and (min-width: 840px) {
-  .bookOn-site_AllChallenges_Container .allChallenges_Container {
-    grid-row-start: 2;
-    grid-column-start: 1;
-    grid-row-end: 3;
-    grid-column-end: 2;
-  }
+.bookOn-site_AllChallenges_Container .bookOn-site_img {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 2;
 }
 
+@media screen and (min-width: 840px) {
+  .bookOn-site_Container {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+    max-width: 450px;
+    max-height: 360px;
+  }
+  .bookOn-site_Container button {
+    margin: 5px 10px;
+  }
+}
+@media screen and (min-width: 840px) {
+  .allChallenges_img {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+  }
+}
+@media screen and (min-width: 840px) {
+  .allChallenges_Container {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+    max-width: 450px;
+    max-height: 360px;
+  }
+  .allChallenges_Container button {
+    margin: 5px 10px;
+  }
+}
 /*  Part4 /end  Our Story / Booking / Play online     */
 /*      Footer      */
 .footerContaier {
