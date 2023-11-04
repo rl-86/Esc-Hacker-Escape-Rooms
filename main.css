@@ -44,6 +44,10 @@ h3 {
   font-weight: normal;
 }
 
+h4 {
+  font-size: 1.8rem;
+}
+
 /*  vvv  Header  vvv  */
 .header {
   background-color: #011827;
@@ -408,11 +412,12 @@ img.logo {
   height: 500px;
 }
 .ourStory p {
-  margin: 70px 0 0;
-  padding: 10px;
   font-size: 2.8rem;
   color: #fff;
   text-align: center;
+  max-width: 630px;
+  margin: 70px 0 0;
+  padding: 10px;
 }
 .ourStory .storyButton {
   color: #8ACFE5;
@@ -435,11 +440,13 @@ img.logo {
 .bookOn-site_AllChallenges_Container {
   display: block;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 840px) {
   .bookOn-site_AllChallenges_Container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 37.5vw 37.5vw;
+    grid-template-rows: 35.7vw 35.7vw;
+    justify-items: center;
+    align-items: start;
   }
 }
 .bookOn-site_AllChallenges_Container button {
@@ -464,7 +471,7 @@ img.logo {
   height: auto;
   position: relative;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 840px) {
   .bookOn-site_AllChallenges_Container img {
     margin-bottom: 0;
     top: 0;
@@ -477,7 +484,7 @@ img.logo {
   font-size: 2.4rem;
   margin: 20px;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 840px) {
   .bookOn-site_AllChallenges_Container .bookOn-site_img {
     grid-row-start: 1;
     grid-column-start: 1;
@@ -485,7 +492,16 @@ img.logo {
     grid-column-end: 2;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 840px) {
+  .bookOn-site_AllChallenges_Container .bookOn-site_Container {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+    width: 416px;
+  }
+}
+@media screen and (min-width: 840px) {
   .bookOn-site_AllChallenges_Container .allChallenges_img {
     grid-row-start: 2;
     grid-column-start: 2;
@@ -493,20 +509,12 @@ img.logo {
     grid-column-end: 3;
   }
 }
-@media screen and (min-width: 800px) {
-  .bookOn-site_AllChallenges_Container .bookOn-site {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    grid-row-end: 2;
-    grid-column-end: 3;
-  }
-}
-@media screen and (min-width: 800px) {
-  .bookOn-site_AllChallenges_Container .allChallenges {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    grid-row-end: 2;
-    grid-column-end: 3;
+@media screen and (min-width: 840px) {
+  .bookOn-site_AllChallenges_Container .allChallenges_Container {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
   }
 }
 
@@ -524,7 +532,6 @@ img.logo {
   width: 100%;
 }
 .footerContaier h4 {
-  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 6px;
 }
