@@ -445,6 +445,7 @@ img.logo {
     justify-items: center;
     align-items: center;
     overflow: hidden;
+    margin-bottom: 190px;
   }
 }
 .bookOn-site_AllChallenges_Container button {
@@ -551,6 +552,7 @@ img.logo {
 }
 .footerContaier p {
   font-size: 1.8rem;
+  max-width: 410px;
 }
 .footerContaier li {
   font-size: 1.8rem;
@@ -558,6 +560,26 @@ img.logo {
 }
 .footerContaier .listSpace {
   height: 15px;
+}
+@media screen and (min-width: 840px) {
+  .footerContaier {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    height: 467px;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /*.footerSiteMap {
+        margin-right: -110px;
+    }
+
+    .footerSocialMedia {
+        margin-right: 100px;
+    }
+    */
+  }
 }
 
 /*      Footer End     */
