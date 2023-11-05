@@ -61,7 +61,8 @@ h4 {
 
 
 
-/*  vvv  Header  vvv  */
+/*  Part1  Start/  Header  / logo  /  Main menu  */
+
 .header {
     background-color: #011827;
     height: fit-content;
@@ -134,9 +135,9 @@ img.logo {
     }
 }
 
-/*  ^^^  Header  ^^^  */
+/*  Part 1  End  /  Header  / Logo  /  Main menu  */
 
-/*  Part 2 start, Buttons, Testimonials, Challenge cards  */
+/*  Part 2  Start  /  Main background  /  Buttons, Testimonials  */
 
 .mainBackgroundImg {
     width: 100%;
@@ -301,7 +302,10 @@ img.logo {
     }
 }
 
-/*  ^^^  Testimonials  ^^^  */
+/*  Part 2  /End /  Main background  /  Buttons  /  Testimonials  */
+
+
+/*  Part 3  /Start  Challenge cards  /  Buttons  */
 
 .popularChallenges {
     margin: 40px 0 0;
@@ -331,7 +335,6 @@ img.logo {
         max-width: 100%;
         justify-content: flex-start;
         padding: 0 50px;
-
 
     }
 }
@@ -427,6 +430,7 @@ img.logo {
 
 }
 
+/*  See .buttonContainer_1 to edit buttons  */
 .buttonContainer_2 {
     display: flex;
     flex-direction: column;
@@ -439,13 +443,10 @@ img.logo {
     }
 }
 
-/*  See .buttonContainer_1 to edit buttons  */
+/*  Part 3 /End  |   Challenge cards   /   Buttons  */
 
 
-/*  Part 2 End ^^^, Buttons, Testimonials, Challenge cards  */
-
-
-/*  Part4 /start  Our Story / Booking / Play online     */
+/*  Part 4 /End  /  Our Story  /  Booking  /  Play online  */
 
 .ourStory {
     display: flex;
@@ -603,11 +604,7 @@ img.logo {
     }
 }
 
-
-
-
-
-/*  Part4 /end  Our Story / Booking / Play online     */
+/*  Part 4 /End  /  Our Story  /  Booking  /  Play online  */
 
 /*      Footer      */
 
