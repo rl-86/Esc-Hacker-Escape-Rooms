@@ -64,8 +64,14 @@ h4 {
 /*  Part1  Start/  Header  / logo  /  Main menu  */
 
 .header {
+    display: flex;
+    justify-content: space-between;
     background-color: #011827;
     height: fit-content;
+
+    @media screen and (min-width: 800px) {
+        display: block;
+    }
 
 }
 
@@ -99,7 +105,25 @@ img.logo {
     }
 }
 
-/*  Main menu   */
+/*     Mobile Menu     */
+
+.mobileMenu {
+
+    margin: 34px 20px 0 0;
+
+    img {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+}
+
+
+/*      Main menu       */
 
 .mainMenu {
     display: none;
@@ -116,7 +140,7 @@ img.logo {
         }
     }
 
-    a {
+    li {
         display: flex;
         background-color: none;
         font-size: 2.4rem;
@@ -129,9 +153,6 @@ img.logo {
         margin: 12px 0;
         height: 50px;
 
-        @media screen and (min-width: 1000px) {
-            font-size: 2.4rem;
-        }
     }
 }
 
@@ -653,14 +674,6 @@ img.logo {
         padding: 0;
         height: 467px;
 
-        /*.footerSiteMap {
-            margin-right: -110px;
-        }
-
-        .footerSocialMedia {
-            margin-right: 100px;
-        }
-        */
     }
 
 }
