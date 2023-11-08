@@ -11,6 +11,7 @@
 
 html {
 
+    z-index: 1;
     overflow-x: hidden;
 
     button {
@@ -107,20 +108,78 @@ img.logo {
 
 /*     Mobile Menu     */
 
-.mobileMenu {
+.mobileMenuButton {
 
     margin: 34px 20px 0 0;
 
     img {
-        &:hover {
-            cursor: pointer;
-        }
+        cursor: pointer;
+
     }
 
     @media screen and (min-width: 800px) {
         display: none;
     }
 }
+
+.mobileMenuBackground {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff4b;
+    position: absolute;
+    z-index: 2;
+
+
+}
+
+.mobileMenuContainer {
+    display: block;
+    background-color: #002f4f;
+    position: relative;
+    width: 91vw;
+    height: 95vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.menuButtonContainer {
+    display: flex;
+    width: 91vw;
+    height: fit-content;
+    justify-content: end;
+
+    img {
+        cursor: pointer;
+        margin: 25px 28px 0 0;
+    }
+}
+
+
+.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 80vw;
+    margin: 0 auto;
+    height: 80vh;
+    gap: 20px;
+
+    li {
+        font-size: 3.6rem;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 15px 30px;
+    }
+
+    ;
+
+}
+
 
 
 /*      Main menu       */
