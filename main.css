@@ -8,7 +8,6 @@
 }
 
 html {
-  z-index: 1;
   overflow-x: hidden;
 }
 html button {
@@ -88,18 +87,16 @@ img.logo {
     font-size: 4rem;
   }
 }
-@media screen and (min-width: 1000px) {
-  .headline {
-    font-size: 4rem;
-  }
-}
 
 /*     Mobile Menu     */
 .mobileMenuButton {
-  margin: 34px 20px 0 0;
+  margin: 34px 4% 0 0;
 }
 .mobileMenuButton img {
   cursor: pointer;
+}
+.mobileMenuButton img:active {
+  overflow-y: hidden;
 }
 @media screen and (min-width: 800px) {
   .mobileMenuButton {
@@ -113,12 +110,12 @@ img.logo {
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.2941176471);
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 
 .mobileMenuContainer {
   display: block;
-  background-color: #002f4f;
+  background-color: #011827;
   position: relative;
   width: 91vw;
   height: 95vh;

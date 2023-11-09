@@ -11,7 +11,6 @@
 
 html {
 
-    z-index: 1;
     overflow-x: hidden;
 
     button {
@@ -101,19 +100,20 @@ img.logo {
         font-size: 4rem;
     }
 
-    @media screen and (min-width: 1000px) {
-        font-size: 4rem;
-    }
 }
 
 /*     Mobile Menu     */
 
 .mobileMenuButton {
 
-    margin: 34px 20px 0 0;
+    margin: 34px 4% 0 0;
 
     img {
         cursor: pointer;
+
+        &:active {
+            overflow-y: hidden;
+        }
 
     }
 
@@ -128,14 +128,14 @@ img.logo {
     height: 100vh;
     background-color: #ffffff4b;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 
 
 }
 
 .mobileMenuContainer {
     display: block;
-    background-color: #002f4f;
+    background-color: #011827;
     position: relative;
     width: 91vw;
     height: 95vh;
